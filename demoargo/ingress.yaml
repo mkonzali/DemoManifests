@@ -1,17 +1,16 @@
-# templates/ingress.yaml
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: {{ .Release.Name }}
+  name: demoapp
 spec:
   rules:
-  - host: <your-domain>
+  - host: demoargo
     http:
       paths:
       - pathType: Prefix
         path: "/"
         backend:
           service:
-            name: {{ .Release.Name }}
+            name: demo-service
             port:
-              number: {{ .Values.service.port }}
+              number: 80
