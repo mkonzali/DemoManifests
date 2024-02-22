@@ -4,7 +4,7 @@ metadata:
   generateName: notification-synfail-
   annotations:
     argocd.argoproj.io/hook: SyncFail
-    argocd.argoproj.io/hook-delete-policy: HookSucceeded
+#    argocd.argoproj.io/hook-delete-policy: HookSucceeded
 spec:
   template:
     spec:
